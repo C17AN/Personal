@@ -150,4 +150,10 @@ int main()
     }
   }
   puts("Exiting Program...");
+  for(int i = 0; i < node_cnt; i++)
+  {
+    temp_node = temp_node -> next;
+    free(temp_node);
+  }
+  free(head);  
 }
