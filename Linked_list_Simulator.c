@@ -120,7 +120,7 @@ int main()
 
           else
           {
-            for(int i = 0; i < node_idx; i++)
+            for(int i = 1; i <= node_idx; i++)
               temp_node = temp_node -> next;
 
             delNode(temp_node);
@@ -131,12 +131,21 @@ int main()
         }
         break;
       case 3:
-        temp_node = temp_node -> next;
-        for(int i = 0; i < node_cnt; i++)
+        printf("┌──────────────┐\n");
+        printf("│      HEAD    │\n");
+        printf("└──────────────┘\n");        
+
+        for(int i = 1; i <= node_cnt; i++)
         {
-          printf("node %d's data : %d\n", i, temp_node -> data);
           temp_node = temp_node -> next;
+
+            printf("        ┃       \n");
+            printf("┌──────────────┐\n");
+            printf("│    NODE %d    │\n", i);
+            printf("│   Data : %d   │\n", temp_node -> data);            
+            printf("└──────────────┘\n");                        
         }
+        temp_node = head;
         break;
     }
   }
