@@ -1,2 +1,0 @@
-# Application
-Application Dev. repository
